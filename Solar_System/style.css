@@ -1,0 +1,189 @@
+body {
+  background-color: #fff7f0;
+
+  align-items: center;
+  justify-content: center;
+}
+a:visited,
+a:link,
+a:active,
+a:hover{
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+.top {
+  /* border: 1px solid blue; */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.head {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.logo {
+  background-color: black;
+  color: white;
+  width: 33px;
+  height: 33px;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.head a {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 19px;
+  width: 5%;
+  text-decoration: none;
+}
+.topics {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.body span {
+  font-size: 60px;
+  margin: 7px;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+}
+.topics p {
+  width: 555px;
+  margin: 3px;
+  padding: 5px;
+  text-align-last: center;
+  display: flex;
+  font-size: 15px;
+}
+.solar-system img {
+  display: flex;
+  width: 10%;
+  height: min-content;
+  margin: 10px;
+}
+.solar-system {
+  display: flex;
+  transform: translateX(20px);
+  position: fixed;
+}
+.the-sun{
+
+    transform:  translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 324px;
+    width: 340px;
+    overflow: hidden;
+}
+.solar-system #sun {
+  transform: translateX(-10px);
+
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+.mer-ven,
+.ear-mar,
+.jup-sat {
+  transform: translateX(20px) translateY(28px);
+  display: flex;
+  height: 308px;
+  flex-direction: column;
+}
+.mer,
+.ven,
+.ear,
+.mar,
+.jup,
+.sat {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  margin: 5px;
+  height: 154px;
+  display: flex;
+  flex-direction: column;
+}
+
+.solar-system #mercury,
+#venus,
+#mars,
+#jupiter,
+#saturn {
+  border: 1px solid black;
+  width: 170px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.solar-system #earth {
+  width: 96px;
+  border: 1px solid black;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.urn-nep {
+  transform: translateX(20px) translateY(28px);
+  display: flex;
+  height: 308px;
+  flex-direction: column;
+}
+.urn,
+.nep {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  margin: 5px;
+  height: 142px;
+  width: 194px;
+  display: flex;
+  flex-direction: column;
+}
+
+.solar-system #uranus {
+  border: 1px solid black;
+  width: 96px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.solar-system #neptune {
+  border: 1px solid black;
+  width: 107px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.solar-system span {
+  color: white;
+  font-size: 12px;
+  margin: 0%;
+}
+
+.ven span {
+  color: white;
+  font-size: 12px;
+  margin: 0%;
+}
+.ear span{
+    color: white;
+    font-size: 12px;
+    margin: 0%;
+  
+}
