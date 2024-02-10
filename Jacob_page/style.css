@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
+
+body {
+  height: 100%;
+  background-color: #f6f3ec;
+}
+.container .header {
+  width: 100%;
+}
+.container .header .details {
+  display: flex;
+
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+.container .header .details span {
+  font-size: 16px;
+  font-weight: 590;
+}
+.container .header .title {
+  text-transform: uppercase;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  height: 53vh;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.container .header .title p{
+  font-size: 90px;
+  word-spacing: 0;
+  /* display: flex; */
+  letter-spacing: -0.05em;
+  line-height: 2.5cm;
+  font-weight: 570;
+}
+.container .header .title img {
+  height: 11vh;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 10px; */
+  border-radius: 15px;
+}
+.large-img img {
+  margin-top: 15px;
+  border-radius: 15px;
+  width: 100%;
+}
+hr {
+  margin-top: 80px;
+  margin-bottom: 15px;
+  border-top: 1px solid black;
+}
+.container .center .work {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.container .center .work span {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -0.05cm;
+}
+.container .center .work .works {
+  display: flex;
+  margin-top: 70px;
+  flex-direction: column;
+}
+.container .center .work .works .horizontal1 {
+  display: flex;
+  /* border: 1px solid black; */
+}
+.container .center .work .works .work1 {
+  margin-left: 5px;
+  /* flex-direction: column; */
+  width: 50%;
+  /* border: 1px solid black; */
+}
+.container .center .work .works span {
+  font-size: 15px;
+  letter-spacing: normal;
+  word-spacing: 0.1cm;
+}
+
+.container .center .work .works .work1 .img1,
+.container .center .work .works .work2 .img2,
+.container .center .work .works .work3 .img3,
+.container .center .work .works .work4 .img4,
+.container .center .work .works .work5 .img5,
+.container .center .work .works .work6 .img6 {
+  margin-top: 15px;
+  /* width: 60%; */
+}
+.container .center .work .works .work1 .img1 #img1,
+.container .center .work .works .work2 .img2 #img2,
+.container .center .work .works .work3 .img3 #img3,
+.container .center .work .works .work4 .img4 #img4,
+.container .center .work .works .work5 .img5 #img5,
+.container .center .work .works .work6 .img6 #img6 {
+  border-radius: 10px;
+  /* box-shadow: 10px 10px 30px red; */
+  width: 98%;
+}
+.container .center .work .works .work2 {
+  margin-left: 5px;
+  /* border: 1px solid black; */
+  width: 25%;
+}
+
+.container .center .work .works .work3 {
+  margin-left: 15px;
+  width: 25%;
+}
+.container .center .work .works .horizontal2 {
+  display: flex;
+  margin-top: 80px;
+}
+
+.container .center .work .works .work4 {
+  width: 25%;
+}
+.container .center .work .works .work5 {
+  margin-left: 15px;
+  width: 50%;
+  /* border: 1px solid black; */
+}
+.container .center .work .works .horizontal2 .work6 {
+  margin-left: 5px;
+  width: 25%;
+}
+.container .center .work .journal {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  /* width: 33.33%; */
+}
+.container .center .work .journal .journal-imgs {
+  display: flex;
+  margin-top: 20px;
+  /* flex-direction: row; */
+}
+
+.container .center .work .journal .journal-imgs .jimg1,
+.container .center .work .journal .journal-imgs .jimg2,
+.container .center .work .journal .journal-imgs .jimg3 {
+  /* display: flex; */
+  /* width: %; */
+  margin: 10px;
+  /* border: 1px solid green; */
+}
+
+.container .center .work .journal .journal-imgs .jimg1 #journalimg1,
+.container .center .work .journal .journal-imgs .jimg2 #journalimg2,
+.container .center .work .journal .journal-imgs .jimg3 #journalimg3 {
+  /* display: flex; */
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.container .center .work .journal .read,
+.container .center .work .about .more {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: right;
+  margin-top: 25px;
+}
+.container .center .work .journal .read span,
+.container .center .work .about .more span {
+  font-size: 15px;
+  letter-spacing: normal;
+}
+.container .center .work .about .jacob {
+  display: flex;
+  margin-top: 40px;
+}
+.container .center .work .about .jacob .jacob-img {
+  width: 20%;
+  /* border: 1px solid black; */
+}
+.container .center .work .about .jacob #jimg {
+  border-radius: 15px;
+}
+.container .center .work .about .jacob .jacob-txt,
+.container .center .work .about .jacob .jacob-txt2 {
+  width: 40%;
+  /* border: 1px solid black; */
+  font-weight: 700;
+}
+.container .center .work .about .more {
+  display: flex;
+  justify-content: right;
+  margin-top: 25px;
+}
+.container .footer {
+  background-image: url("./assets/footer.png");
+  margin-top: 150px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  height: 90vh;
+  color: white;
+  font-family: "inter", sans-serif;
+  text-transform: uppercase;
+  border: 1px solid black;
+}
+
+.container .footer .span{
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.container .footer .contact p {
+    margin-top: 15px;
+    display: flex;
+    margin-left: 15px;
+    font-size: 75px;
+    /* border: 1px solid white; */
+    word-spacing: 0;
+    text-shadow: 0px 0px 15px black;
+    /* display: flex; */
+    letter-spacing: -0.05em;
+    line-height: 2.1cm;
+    font-weight: 570;
+}
