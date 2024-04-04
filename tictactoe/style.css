@@ -90,7 +90,7 @@ body {
 @media(max-width: 600px) {
 
     .winner{
-        transform: translateY(-360px);
+        transform: translateY(-80%);
     }
 
 }
