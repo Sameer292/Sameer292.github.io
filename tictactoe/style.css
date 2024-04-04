@@ -57,6 +57,10 @@ body {
   color: white;
   font-size: 50px;
   text-shadow: 1px 1px 30px black;
+  transition: all .3s ease-in-out;
+}
+.boxes:hover{
+    transform: scale(0.96);
 }
 .winner{
     font-size: 15vw;
