@@ -8,9 +8,8 @@ boxes.forEach((box) => {
   box.addEventListener("mouseover", () => {
     box.style.cursor = "pointer";
     box.style.color = "white";
-    if(!gameOver){
-
-        box.style.backgroundColor = "#022B3A";
+    if (!gameOver) {
+      box.style.backgroundColor = "#022B3A";
     }
   });
 
@@ -19,10 +18,10 @@ boxes.forEach((box) => {
   });
 
   box.addEventListener("click", () => {
-    if (turn == 0 && box.innerHTML === "" && gameOver===false) {
+    if (turn == 0 && box.innerHTML === "" && gameOver === false) {
       box.innerText = "X";
       turn = 1;
-    } else if (turn == 1 && box.innerHTML === "" && gameOver===false) {
+    } else if (turn == 1 && box.innerHTML === "" && gameOver === false) {
       box.innerText = "O";
       turn = 0;
     }
@@ -31,7 +30,7 @@ boxes.forEach((box) => {
 });
 
 playagain.addEventListener("click", () => {
-    gameOver=false;
+  gameOver = false;
   boxes.forEach((box) => {
     box.innerText = "";
   });
@@ -42,6 +41,7 @@ playagain.addEventListener("click", () => {
 });
 
 function checkWinner() {
+  let boardempty = 0;
   const boxes = document.querySelectorAll(".boxes");
   const board = Array.from(boxes).map((box) => box.textContent.trim());
   const winningCombinations = [
@@ -57,9 +57,22 @@ function checkWinner() {
 
   for (const combination of winningCombinations) {
     const [a, b, c] = combination;
-    if (board[a] && board[a] === board[b] && board[a] === board[c] && gameOver==false) {
+    if (
+      board[a] &&
+      board[a] === board[b] &&
+      board[a] === board[c] &&
+      gameOver == false
+    ) {
       gameover(board[a]);
     }
+  }
+  board.forEach((boards) => {
+    if (boards === "") {
+      boardempty++;
+    }
+  });
+  if (boardempty === 0) {
+    draw();
   }
 
   return false;
@@ -71,6 +84,14 @@ function gameover(win) {
   });
   playagain.style.display = "initial";
   turn = 0;
-  gameOver=true;
+  gameOver = true;
 }
 
+function draw(){
+    res.forEach((result) => {
+        result.innerText = "!!!";
+      });
+      playagain.style.display = "initial";
+      turn = 0;
+      gameOver = true;
+}
