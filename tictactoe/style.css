@@ -87,7 +87,7 @@ body {
     background-color: hsl(240, 10%, 90%);
 }
 
-@media(max-width: 600px) {
+@media(max-width: 750px) {
 
     .winner{
         transform: translateY(-80%);
