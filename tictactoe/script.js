@@ -63,7 +63,7 @@ function checkWinner() {
       board[a] === board[c] &&
       gameOver == false
     ) {
-      gameover(board[a]);
+      return (gameover(board[a]));
     }
   }
   board.forEach((boards) => {
@@ -72,7 +72,8 @@ function checkWinner() {
     }
   });
   if (boardempty === 0) {
-    draw();
+      draw();
+
   }
 
   return false;
@@ -85,13 +86,14 @@ function gameover(win) {
   playagain.style.display = "initial";
   turn = 0;
   gameOver = true;
+  return true;
 }
 
-function draw(){
-    res.forEach((result) => {
-        result.innerText = "!!!";
-      });
-      playagain.style.display = "initial";
-      turn = 0;
-      gameOver = true;
+function draw() {
+  res.forEach((result) => {
+    result.innerText = "!!!";
+  });
+  playagain.style.display = "initial";
+  turn = 0;
+  gameOver = true;
 }
