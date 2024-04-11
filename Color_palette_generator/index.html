@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Pallete Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Color Pallete Generator</h1>
+    <div class="container">
+      <div class="inputs">
+        <h3>Number of colors:</h3>
+        <input type="number" name="" class="ips num" id="number" />
+        <h3>Color format</h3>
+        <select name="" id="colorFormat" class="ips">
+          <option value="hex">HEX</option>
+          <option value="rgb">RGB</option>
+        </select>
+        <h3>Color Scheme</h3>
+        <input class="ips" type="text" disabled placeholder="Random" />
+        <div class="buttons">
+          <div class="genclr">
+            <button id="gen">Generate</button>
+            <button id="clr">Clear</button>
+          </div>
+          <div class="cpy">
+            <button id="copy">Copy colors to clipboard!</button>
+          </div>
+        </div>
+      </div>
+      <div class="outputs"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
