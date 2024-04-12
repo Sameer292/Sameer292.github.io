@@ -13,14 +13,18 @@ generate.addEventListener("click", () => {
   }
   colorHEX = [];
   colorRGB = [];
-  if (
-    (screen.width < 800 && numberOfcolors.value > 8) ||
-    numberOfcolors.value > 15
-  ) {
+
+  if (screen.width < 800 && numberOfcolors.value > 8) {
+    alert("Max 8 colors allowed");
+    numberOfcolors.value = 0;
+    return;
+  } 
+  else if (numberOfcolors.value > 15) {
     alert("Max 15 colors allowed");
     numberOfcolors.value = 0;
     return;
-  } else {
+  } 
+  else {
     for (let i = 0; i < numberOfcolors.value; i++) {
       const out = document.createElement("div");
       if (type.value == "hex") {
@@ -34,10 +38,10 @@ generate.addEventListener("click", () => {
         out.innerText = `rgb\n(${finColor})`;
         colorRGB += `(${finColor})\n`;
       }
-      document.querySelector(".outputs").appendChild(out);
+      output.appendChild(out);
     }
     if (output.hasChildNodes()) {
-      document.getElementById("copy").style.display = "inline";
+      copy.style.display = "inline";
     }
   }
 });
@@ -91,4 +95,15 @@ copy.addEventListener("click", () => {
   } else {
     navigator.clipboard.writeText(colorHEX);
   }
+  document.querySelector(".notifi").style.opacity="1";
+  setTimeout(() => {
+    document.querySelector(".notifi").style.opacity = "0";
+}, 3000);
+});
+output.addEventListener("click",(e)=>{
+  navigator.clipboard.writeText(e.target.innerText);
+  document.querySelector(".notifi").style.opacity="1";
+  setTimeout(() => {
+    document.querySelector(".notifi").style.opacity = "0";
+}, 1200);
 });
