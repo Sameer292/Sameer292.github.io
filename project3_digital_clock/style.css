@@ -1,0 +1,29 @@
+body{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black; */
+    height: 85vh;
+}
+
+.clock{
+    /* border: solid 1px black; */
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clocktimer{
+    /* border: solid 2px red; */
+    text-align: center;
+    align-content: center;
+    height: 10%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: aqua;
+    color: black;
+    font-size: medium;
+}
