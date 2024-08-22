@@ -27,7 +27,7 @@ restart.addEventListener("click", () => {
 });
 
 function gameOver() {
-  alert("Game over!!! You lose");
+  alert(`Game over!!! You lose. The number was ${randVal}`);
   location.reload();
 }
 
