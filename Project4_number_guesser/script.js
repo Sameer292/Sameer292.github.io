@@ -1,13 +1,14 @@
-const randVal = Math.floor(Math.random() * 100 + 1);
+let randVal = Math.floor(Math.random() * 100 + 1);
 const submit = document.querySelector("button");
 const input = document.querySelector("#inp");
-let lives = 10;
+let lives = 3;
 const wrongguess = document.querySelector(".wrongguess");
 const restart = document.querySelector(".restart");
-
 document.querySelector(".rem").innerHTML = lives;
+
+
 submit.addEventListener("click", () => {
-  const val = parseInt(input.value);
+    const val = parseInt(input.value);
   if (lives <= 0) {
     gameOver();
   } else {
@@ -28,31 +29,32 @@ restart.addEventListener("click", () => {
 
 function gameOver() {
   alert(`Game over!!! You lose. The number was ${randVal}`);
-  location.reload();
+  //   location.reload();
+  newGame()
 }
 
 function isInputinvalid(val) {
   if (val > 100 || val < 0 || isNaN(val)) {
     return true;
-  }
+}
 }
 
 function wrongguesser(val) {
   lifesucker();
   displayprevguesses();
-
+  
   if (lives > 0) {
     highorlow(val);
-  } else {
+} else {
     gameOver();
-  }
+}
 }
 
 function highorlow(val) {
-  if (val < randVal) {
+    if (val < randVal) {
     alert("Incorrect! Guess higher");
   } else {
-    alert("Incorrect! Guess lower");
+      alert("Incorrect! Guess lower");
   }
 }
 function lifesucker() {
@@ -65,4 +67,14 @@ function displayprevguesses() {
   wrongGuesses.innerText = input.value;
   wrongGuesses.classList.add("guesses");
   wrongguess.appendChild(wrongGuesses);
+}
+
+
+function newGame()
+{
+    lives = 3
+    input.value = ""
+    randVal = Math.floor(Math.random() * 100 + 1);
+    wrongguess.innerHTML="Previous guesses: "
+    document.querySelector(".rem").innerHTML = lives;
 }
