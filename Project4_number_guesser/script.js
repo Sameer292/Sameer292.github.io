@@ -7,16 +7,17 @@ const restart = document.querySelector(".restart");
 
 document.querySelector(".rem").innerHTML = lives;
 submit.addEventListener("click", () => {
+  const val = parseInt(input.value);
   if (lives <= 0) {
     gameOver();
   } else {
-    if (isInputinvalid()) {
+    if (isInputinvalid(val)) {
       alert("Please enter a number between 1-100");
-    } else if (parseInt(input.value) === randVal) {
+    } else if (val === randVal) {
       alert("Congrats number matched");
       location.reload();
     } else {
-      wrongguesser();
+      wrongguesser(val);
     }
   }
 });
@@ -30,25 +31,25 @@ function gameOver() {
   location.reload();
 }
 
-function isInputinvalid() {
-  if (parseInt(input.value) > 100 || parseInt(input.value) < 0 || isNaN(parseInt(input.value))) {
+function isInputinvalid(val) {
+  if (val > 100 || val < 0 || isNaN(val)) {
     return true;
   }
 }
 
-function wrongguesser() {
+function wrongguesser(val) {
   lifesucker();
   displayprevguesses();
 
   if (lives > 0) {
-    highorlow();
+    highorlow(val);
   } else {
     gameOver();
   }
 }
 
-function highorlow() {
-  if (parseInt(input.value) < randVal) {
+function highorlow(val) {
+  if (val < randVal) {
     alert("Incorrect! Guess higher");
   } else {
     alert("Incorrect! Guess lower");
