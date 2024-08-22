@@ -37,12 +37,19 @@ h2{
 }
 button{
     width: 15%;
-    height: 20%;
+    height: 70%;
     border-radius: 10px;
     border: none;
     margin-top: 10px;
     box-shadow: 10px 10px 20px;
     /* transition: 0.2s ease-in-out; */
+}
+.restart{
+    width: 5%;
+    min-width: fit-content;
+    background-color: red;
+    /* color: wheat; */
+    /* text-shadow: 0 0 0; */
 }
 input{
     height: 30px;
