@@ -1,7 +1,7 @@
 let randVal = Math.floor(Math.random() * 100 + 1);
 const submit = document.querySelector("button");
 const input = document.querySelector("#inp");
-let lives = 3;
+let lives = 10;
 const wrongguess = document.querySelector(".wrongguess");
 const restart = document.querySelector(".restart");
 document.querySelector(".rem").innerHTML = lives;
@@ -71,7 +71,7 @@ function displayprevguesses() {
 
 function newGame()
 {
-    lives = 3
+    lives = 10
     input.value = ""
     randVal = Math.floor(Math.random() * 100 + 1);
     wrongguess.innerHTML="Previous guesses: "
