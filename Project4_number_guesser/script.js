@@ -16,7 +16,7 @@ submit.addEventListener("click", () => {
       alert("Please enter a number between 1-100");
     } else if (val === randVal) {
       alert("Congrats number matched");
-      location.reload();
+      newGame()
     } else {
       wrongguesser(val);
     }
@@ -24,12 +24,11 @@ submit.addEventListener("click", () => {
 });
 
 restart.addEventListener("click", () => {
-  location.reload();
+  newGame()
 });
 
 function gameOver() {
   alert(`Game over!!! You lose. The number was ${randVal}`);
-  //   location.reload();
   newGame()
 }
 
