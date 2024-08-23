@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keypress checker</title>
+    <style>
+      body {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #414141;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="check">
+      <h3>Press a key</h3>
+      <div class="insert"></div>
+    </div>
+  </body>
+  <script>
+    const check = document.querySelector(".check");
+    window.addEventListener("keydown", (e) => {
+      document.querySelector(".insert").innerHTML = `
+        <table>
+  <tr>
+    <th>Key</th>
+    <th>Keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+        `;
+    });
+  </script>
+</html>
