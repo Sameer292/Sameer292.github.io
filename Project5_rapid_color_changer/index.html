@@ -23,8 +23,13 @@
 
   <script>
     let changer
+    let running = 0
     document.querySelector(".start").addEventListener("click", () => {
-      changer = setInterval(changeRandomcolor, 1000);
+        if(running === 0)
+    {
+        changer = setInterval(changeRandomcolor, 1000);
+        running = 1
+    }
     });
     function changeRandomcolor() {
         console.log("started");
@@ -40,7 +45,12 @@
     }
 
     document.querySelector(".stop").addEventListener("click", () => {
-      clearInterval(changer);
+        if(running === 1)
+    {
+        clearInterval(changer);
+        running = 0
+
+    }
     });
   </script>
 </html>
