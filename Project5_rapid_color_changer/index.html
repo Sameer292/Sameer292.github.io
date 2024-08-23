@@ -10,7 +10,7 @@
         justify-content: center;
         align-items: center;
         height: 90vh;
-        background-color: rgb(45,45,45);
+        background-color: rgb(45, 45, 45);
       }
       .stop {
         margin-left: 10px;
@@ -22,22 +22,21 @@
   </body>
 
   <script>
-    let changer
-    let running = 0
+    let changer;
+    let running = 0;
     document.querySelector(".start").addEventListener("click", () => {
-        if(running === 0)
-    {
+      if (running === 0) {
         changer = setInterval(changeRandomcolor, 1000);
-        running = 1
-    }
+        running = 1;
+      }
     });
     function changeRandomcolor() {
-        console.log("started");
-        
-        const r = getRandomInt(255)
-        const g = getRandomInt(255)
-        const b = getRandomInt(255)
-        document.body.style.backgroundColor = `rgb(${r},${g},${b})`
+      console.log("started");
+
+      const r = getRandomInt(255);
+      const g = getRandomInt(255);
+      const b = getRandomInt(255);
+      document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
     }
 
     function getRandomInt(max) {
@@ -45,12 +44,10 @@
     }
 
     document.querySelector(".stop").addEventListener("click", () => {
-        if(running === 1)
-    {
+      if (running === 1) {
         clearInterval(changer);
-        running = 0
-
-    }
+        running = 0;
+      }
     });
   </script>
 </html>
