@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapid color changer</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background-color: rgb(45,45,45);
+      }
+      .stop {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="start">Start</button><button class="stop">Stop</button>
+  </body>
+
+  <script>
+    let changer
+    document.querySelector(".start").addEventListener("click", () => {
+      changer = setInterval(changeRandomcolor, 1000);
+    });
+    function changeRandomcolor() {
+        console.log("started");
+        
+        const r = getRandomInt(255)
+        const g = getRandomInt(255)
+        const b = getRandomInt(255)
+        document.body.style.backgroundColor = `rgb(${r},${g},${b})`
+    }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    document.querySelector(".stop").addEventListener("click", () => {
+      clearInterval(changer);
+    });
+  </script>
+</html>
