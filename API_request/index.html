@@ -54,13 +54,27 @@
       const reqUrl = `https://api.github.com/users/${username}`;
       fetch(reqUrl)
         .then((response) => {
-          return response.json();
+            if(response.status === 404){
+
+                document.querySelector(".name").innerHTML = 'Not found';
+                document.querySelector(".location").innerHTML = 'Not found';
+                document.querySelector(".followers").innerHTML = 'Not found';
+                document.querySelector(".iii").src = ""
+                // return new Error
+                return null
+            }
+            else{
+
+                return response.json();
+            }
         })
         .then((data) => {
-          document.querySelector(".name").innerHTML = data.name;
-          document.querySelector(".location").innerHTML = data.location;
-          document.querySelector(".followers").innerHTML = data.followers;
-          document.querySelector(".iii").src = data.avatar_url;
+            if(data !== null){
+                document.querySelector(".name").innerHTML = data.name;
+                document.querySelector(".location").innerHTML = data.location;
+                document.querySelector(".followers").innerHTML = data.followers;
+                document.querySelector(".iii").src = data.avatar_url;
+            }
         })
         .catch((err) => {
           console.log("Error: ", err);
