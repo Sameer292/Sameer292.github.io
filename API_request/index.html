@@ -4,84 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API request</title>
-  </head>
-  <body>
+</head>
+<body>
     <h1>Find details</h1>
     <span>
-      <h4>Enter your Github username</h4>
-      <input type="text" name="username" id="" class="username" />
-      <button class="submit">Search</button>
+        <h4>Enter your Github username</h4>
+        <input type="text" name="username" id="" class="username" />
+        <button class="submit">Search</button>
     </span>
     <table>
-      <tr>
-        <th>Name</th>
-        <th>Followers</th>
-        <th>location</th>
+        <tr>
+            <th>Name</th>
+            <th>Followers</th>
+            <th>location</th>
       </tr>
       <tr>
-        <td class="name"></td>
+          <td class="name"></td>
         <td class="followers"></td>
         <td class="location"></td>
       </tr>
     </table>
     <div>
-      <img class="iii" src="" alt="" />
+        <img class="iii" src="" alt="" />
     </div>
-  </body>
-  <script>
-    const submit = document.querySelector(".submit");
-    // submit.addEventListener("click", () => {
-    //   const username = document.querySelector(".username").value;
-    //   const reqUrl = `https://api.github.com/users/${username}`;
-    //   const xhr = new XMLHttpRequest();
-    //   xhr.open("GET", reqUrl);
-    //   xhr.onreadystatechange = function () {
-    //   if (xhr.readyState === 4) {
-    //     const data = JSON.parse(this.responseText);
-
-    //   document.querySelector(".name").innerHTML = data.name;
-    //    document.querySelector(".location").innerHTML = data.location;
-    //   document.querySelector(".followers").innerHTML = data.followers;
-    //    document.querySelector(".iii").src = data.avatar_url;
-
-    //   }
-    // };
-    //   xhr.send();
-    // });
-
-    submit.addEventListener("click", () => {
-      const username = document.querySelector(".username").value;
-      const reqUrl = `https://api.github.com/users/${username}`;
-      fetch(reqUrl)
-        .then((response) => {
-            if(response.status === 404){
-
-                document.querySelector(".name").innerHTML = 'Not found';
-                document.querySelector(".location").innerHTML = 'Not found';
-                document.querySelector(".followers").innerHTML = 'Not found';
-                document.querySelector(".iii").src = ""
-                // return new Error
-                return null
-            }
-            else{
-
-                return response.json();
-            }
-        })
-        .then((data) => {
-            if(data !== null){
-                document.querySelector(".name").innerHTML = data.name;
-                document.querySelector(".location").innerHTML = data.location;
-                document.querySelector(".followers").innerHTML = data.followers;
-                document.querySelector(".iii").src = data.avatar_url;
-            }
-        })
-        .catch((err) => {
-          console.log("Error: ", err);
-        })
-        .finally(() => {
-          console.log("Task completed");
-        });
-    });
-  </script>
+</body>
+<script src="script.js"></script>
 </html>
